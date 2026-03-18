@@ -34,7 +34,7 @@ switch ($data['countryName']) {
             please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
             <a href="../fla">islandMovers Florida</a>';
         } else {
-            $message = $message = 'This is service is not availabe for your location<br/>
+            $message = 'This is service is not availabe for your location<br/>
             click "continue" to proceed with restricted access';
         }
         break;
@@ -46,7 +46,7 @@ switch ($data['countryName']) {
             please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
             <a href="../dub">islandMovers Dubai</a>';
         } else {
-            $message = $message = 'This is service is not availabe for your location<br/>
+            $message = 'This is service is not availabe for your location<br/>
             click "continue" to proceed with restricted access';
         }
         break;

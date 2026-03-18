@@ -8,9 +8,7 @@ switch ($data['countryName']) {
     case 'Barbados':
         $_SESSION['country'] = 'Barbados';
         $_SESSION['region'] = 'Caribbean';
-        unset($_SESSION['incorrecLocation']);
-        header('Location: ./');
-        die();
+
         break;
     case 'Dominica':
         $_SESSION['region'] = 'Caribbean';
@@ -21,10 +19,10 @@ switch ($data['countryName']) {
         break;
     case 'Saint Vincent and The Grenadines':
         $_SESSION['region'] = 'Caribbean';
-        $_SESSION['incorrectLocation'] = "true";
-        $message = 'This is not the version for your location<br/>
-        please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
-        <a href="../svt">islandMovers St. Vincent</a>';
+        $_SESSION['country'] = 'Saint Vincent and The Grenadines';
+        unset($_SESSION['incorrecLocation']);
+        header('Location: ./');
+        die();
         break;
     case 'United States of America':
         $_SESSION['incorrectLocation'] = "true";

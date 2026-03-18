@@ -6,18 +6,19 @@ $data = json_decode($response, true);
 
 switch ($data['countryName']) {
     case 'Barbados':
-        $_SESSION['country'] = 'Barbados';
-        $_SESSION['region'] = 'Caribbean';
-        unset($_SESSION['incorrecLocation']);
-        header('Location: ./');
-        die();
-        break;
-    case 'Dominica':
         $_SESSION['region'] = 'Caribbean';
         $_SESSION['incorrectLocation'] = "true";
         $message = 'This is not the version for your location<br/>
         please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
-        <a href="../dma">islandMovers Dominica</a>';
+        <a href="../bbd">islandMovers Barbados</a>';
+        break;
+    case 'Dominica':
+        $_SESSION['country'] = 'Dominica';
+        $_SESSION['region'] = 'Caribbean';
+        unset($_SESSION['incorrecLocation']);
+        header('Location: ./');
+        die();
+
         break;
     case 'Saint Vincent and The Grenadines':
         $_SESSION['region'] = 'Caribbean';
@@ -34,7 +35,7 @@ switch ($data['countryName']) {
             please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
             <a href="../fla">islandMovers Florida</a>';
         } else {
-            $message = $message = 'This is service is not availabe for your location<br/>
+            $message = 'This is service is not availabe for your location<br/>
             click "continue" to proceed with restricted access';
         }
         break;
@@ -46,7 +47,7 @@ switch ($data['countryName']) {
             please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
             <a href="../dub">islandMovers Dubai</a>';
         } else {
-            $message = $message = 'This is service is not availabe for your location<br/>
+            $message = 'This is service is not availabe for your location<br/>
             click "continue" to proceed with restricted access';
         }
         break;

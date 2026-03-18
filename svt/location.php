@@ -5,19 +5,12 @@ $response = file_get_contents($url);
 $data = json_decode($response, true);
 
 switch ($data['countryName']) {
-    case 'Saint Vincent and The Grenadines':
-        $_SESSION['country'] = 'St Vincent';
+    case 'Barbados':
+        $_SESSION['country'] = 'Barbados';
         $_SESSION['region'] = 'Caribbean';
         unset($_SESSION['incorrecLocation']);
         header('Location: ./');
         die();
-        break;
-    case 'Barbados':
-        $_SESSION['region'] = 'Caribbean';
-        $_SESSION['incorrectLocation'] = "true";
-        $message = 'This is not the version for your location<br/>
-        please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
-        <a href="../bbd">islandMovers Barbados</a>';
         break;
     case 'Dominica':
         $_SESSION['region'] = 'Caribbean';
@@ -25,6 +18,13 @@ switch ($data['countryName']) {
         $message = 'This is not the version for your location<br/>
         please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
         <a href="../dma">islandMovers Dominica</a>';
+        break;
+    case 'Saint Vincent and The Grenadines':
+        $_SESSION['region'] = 'Caribbean';
+        $_SESSION['incorrectLocation'] = "true";
+        $message = 'This is not the version for your location<br/>
+        please click the following button to be redirected to the correct site or click "continue" to proceed with restricted access
+        <a href="../svt">islandMovers St. Vincent</a>';
         break;
     case 'United States of America':
         $_SESSION['incorrectLocation'] = "true";
@@ -73,9 +73,9 @@ switch ($data['countryName']) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link id="theme" rel="stylesheet" href="./style/formpages.css" />
+    <link id="theme" rel="stylesheet" href="../style/formpages.css" />
 
-    <link rel="icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="icon" href="../images/logo.png" type="image/x-icon" />
     <title>Barbados</title>
 </head>
 

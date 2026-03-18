@@ -4,7 +4,7 @@ if (!isset($_SESSION['region'])) {
   header('Location: ./location.php');
   die();
 }
- if(!isset($_SESSION['loggedin'])){
+if(!isset($_SESSION['loggedin'])){
   header('Location:login.php');
   die();
 } 
@@ -18,8 +18,8 @@ require_once('./function/order_function.php');
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link id="theme" rel="stylesheet" href="./style/formpages.css" />
-  <link rel="icon" href="./images/logo.png" type="image/x-icon" />
+  <link id="theme" rel="stylesheet" href="../style/formpages.css" />
+  <link rel="icon" href="../images/logo.png" type="image/x-icon" />
   <style>
     .text {
       margin-top: 0.25vw;

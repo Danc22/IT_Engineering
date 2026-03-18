@@ -38,8 +38,8 @@
                     <input type="submit" id="regionSelect" class="usa" name="loc" style="display: none" value="Florida" />
                 </p>
                 <p id="regionSelect" onmouseover="functLocation('Mid')" onmouseout="reset()">Middle East
-                    <input type="submit" id="regionSelect" class="mid" name="loc" style="display:none;" valie="Dubai" />
-                    <input type="submit" id="regionSelect" class="mid" name="loc" style="display:none;" valie="Lebanon" />
+                    <input type="submit" id="regionSelect" class="mid" name="loc" style="display:none;" value="Dubai" />
+                    <input type="submit" id="regionSelect" class="mid" name="loc" style="display:none;" value="Lebanon" />
                 </p>
 
             </form>

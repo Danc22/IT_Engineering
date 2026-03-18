@@ -54,7 +54,7 @@ if (!isset($_SESSION['region'])){
     </div>
 
   </div>
-  <script src="../scripts/jquery-3.7.1.js"></script>
+  <script src="./scripts/jquery-3.7.1.js"></script>
   <script>
     const option = document.getElementById('car');
     const img = $('#cars');
@@ -70,19 +70,19 @@ if (!isset($_SESSION['region'])){
       switch (option.value) {
         case 'Honda CR-V':
           img.attr({
-            src: "./images/honda.jpg",
+            src: "../images/honda.jpg",
             alt: "Red Honda CR-V HYBRID"
           })
           break;
         case 'Nissan Sentra':
           img.attr({
-            src: './images/nissan.jpg',
+            src: '../images/nissan.jpg',
             alt: 'White Nissan Sentra'
           })
           break;
           case 'Suzuki Swift Sport':
             img.attr({
-            src: './images/suzuki.jpg',
+            src: '../images/suzuki.jpg',
             alt: 'Yellow Suzuki Swift Sport'
           })
           break;

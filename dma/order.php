@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['region'])) {
+if (!(isset($_SESSION['country']) || isset($_SESSION['incorrectLocation']))) {
   header('Location: ./location.php');
   die();
 }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['location']) && $_SESSION['region']){
+if(isset($_SESSION['location']) || $_SESSION['region']){
     session_unset();
 }
 $_SESSION['location'] = $_POST['loc'];
